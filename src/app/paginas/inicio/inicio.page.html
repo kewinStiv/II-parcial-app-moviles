@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listado de Pokemones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar animated="true" placeholder="Buscar Pokemones"></ion-searchbar>
+  
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokemones">
+      <ion-label>{{ pokemon.name }}</ion-label>
+      <ion-thumbnail slot="start">
+        <img [src]="pokemon.sprites.front_default" alt="Sprite">
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
